@@ -69,9 +69,9 @@ public class CardTurn : MonoBehaviour
         if (GameManager.firstCard.nameIndex == nameIndex)
         {
             GameManager.turnedCards = 0; 
-            Destroy(GameManager.firstCard.gameObject , 0.30f);
+            Destroy(GameManager.firstCard.gameObject , 0.23f);
             GameManager.firstCard = null;
-            Destroy(gameObject, 0.30f);   
+            Destroy(gameObject, 0.23f);   
         }
         else
         {
@@ -83,7 +83,7 @@ public class CardTurn : MonoBehaviour
     }
     IEnumerator WaitForTurnCard() 
     {
-        yield return new WaitForSeconds(0.80f);
+        yield return new WaitForSeconds(0.60f);
         GameManager.turnedCards = 0;
     }
     public void TurnCard()
